@@ -1,0 +1,55 @@
+buildscript {
+    repositories {
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath "net.serenity-bdd:serenity-gradle-plugin:3.5.0"
+    }
+}
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: "net.serenity-bdd.serenity-gradle-plugin"
+
+defaultTasks 'clean','test','aggregate'
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+ext {
+    slf4jVersion = '1.7.7'
+    serenityCoreVersion = '3.6.21'
+    junitVersion = '5.8.2'
+    assertJVersion = '3.22.0'
+    logbackVersion = '1.2.10'
+}
+
+dependencies {
+    testImplementation "net.serenity-bdd:serenity-core:${serenityCoreVersion}",
+                "net.serenity-bdd:serenity-junit5:${serenityCoreVersion}",
+                "net.serenity-bdd:serenity-screenplay:${serenityCoreVersion}",
+                "net.serenity-bdd:serenity-ensure:${serenityCoreVersion}",
+                "net.serenity-bdd:serenity-screenplay-rest:${serenityCoreVersion}",
+                "net.serenity-bdd:serenity-cucumber:${serenityCoreVersion}",
+                "org.junit.jupiter:junit-jupiter-api:${junitVersion}",
+                "org.assertj:assertj-core:${assertJVersion}",
+                "ch.qos.logback:logback-classic:${logbackVersion}"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${junitVersion}"
+}
+
+test {
+    systemProperty 'java.util.logging.manager', 'org.apache.logging.log4j.jul.LogManager'
+    useJUnitPlatform()
+    testLogging.showStandardStreams = true
+    systemProperties System.getProperties()
+}
+
+gradle.startParameter.continueOnFailure = true
+
+test.finalizedBy(aggregate)
