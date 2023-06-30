@@ -31,12 +31,11 @@ ext {
 }
 
 dependencies {
-    testImplementation "net.serenity-bdd:serenity-core:${serenityCoreVersion}",
+    implementation "net.serenity-bdd:serenity-core:${serenityCoreVersion}",
                 "net.serenity-bdd:serenity-junit5:${serenityCoreVersion}",
                 "net.serenity-bdd:serenity-screenplay:${serenityCoreVersion}",
                 "net.serenity-bdd:serenity-ensure:${serenityCoreVersion}",
                 "net.serenity-bdd:serenity-screenplay-rest:${serenityCoreVersion}",
-                "net.serenity-bdd:serenity-cucumber:${serenityCoreVersion}",
                 "org.junit.jupiter:junit-jupiter-api:${junitVersion}",
                 "org.assertj:assertj-core:${assertJVersion}",
                 "ch.qos.logback:logback-classic:${logbackVersion}"
@@ -44,12 +43,18 @@ dependencies {
 }
 
 test {
-    systemProperty 'java.util.logging.manager', 'org.apache.logging.log4j.jul.LogManager'
     useJUnitPlatform()
     testLogging.showStandardStreams = true
     systemProperties System.getProperties()
 }
 
 gradle.startParameter.continueOnFailure = true
+
+serenity {
+    reports = ["single-page-html"]
+
+    // // Specify the root package of any JUnit acceptance tests
+    testRoot="starter"
+}
 
 test.finalizedBy(aggregate)

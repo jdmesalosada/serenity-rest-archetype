@@ -1,4 +1,4 @@
-package actors;
+package starter.actors;
 
 import static io.restassured.config.ObjectMapperConfig.objectMapperConfig;
 import static io.restassured.config.RestAssuredConfig.config;
@@ -13,7 +13,7 @@ import net.serenitybdd.screenplay.Ability;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.rest.abilities.CallAnApi;
 import net.thucydides.core.util.EnvironmentVariables;
-import conf.TestEnvironment;
+import starter.conf.TestEnvironment;
 
 public class CastOfUsers extends Cast {
     private final TestEnvironment testEnvironment;
