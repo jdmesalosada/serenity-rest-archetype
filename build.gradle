@@ -39,6 +39,11 @@ dependencies {
                 "org.junit.jupiter:junit-jupiter-api:${junitVersion}",
                 "org.assertj:assertj-core:${assertJVersion}",
                 "ch.qos.logback:logback-classic:${logbackVersion}"
+    compileOnly 'org.projectlombok:lombok:1.18.28'
+    annotationProcessor 'org.projectlombok:lombok:1.18.28'
+
+    testCompileOnly 'org.projectlombok:lombok:1.18.28'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.28'
     testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${junitVersion}"
 }
 
