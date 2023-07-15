@@ -1,5 +1,35 @@
-UserData(name=pepe, id=1)
-UserData(name=maria, id=2)
-UserData(name=jose, id=3)
-UserData(name=jesus, id=4)
-UserData(name=josefa, id=5)
+Request method:	POST
+,Request URI:	https://reqres.in/api/register
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+"				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+#    "email": "eve.holt@reqres.in",
+    "password": "pistol"
+}
+HTTP/1.1 200 OK
+$Date: Sat, 15 Jul 2023 23:35:08 GMT
+.Content-Type: application/json; charset=utf-8
+Content-Length: 36
+Connection: keep-alive
+X-Powered-By: Express
+Access-Control-Allow-Origin: *
+)Etag: W/"24-4iP0za1geN2he+ohu8F0FhCjLks"
+Via: 1.1 vegur
+CF-Cache-Status: DYNAMIC
+ýReport-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=fcP0MhwaORmiSJyUJX0MIXaeScrrQfOujjRC%2FRLEip2HBR%2FC64k2vNNGqbbe4PFiF7Le8Vb4N5C%2F2MlYN32dfgO7NhZNyI8GBX3biB6C5zdAJ%2Bh2vAGhU0F1Kw%3D%3D"}],"group":"cf-nel","max_age":604800}
+BNEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+Server: cloudflare
+CF-RAY: 7e75d1f1991e8dca-MIA
+
+{
+    "id": 4,
+!    "token": "QpwL5tke4Pnpja7X4"
+}

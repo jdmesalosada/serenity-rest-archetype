@@ -1,0 +1,1 @@
+The idea of this feature is to be able to get users from Registraduria service

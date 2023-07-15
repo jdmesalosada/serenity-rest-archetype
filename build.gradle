@@ -59,7 +59,8 @@ serenity {
     reports = ["single-page-html"]
 
     // // Specify the root package of any JUnit acceptance tests
-    testRoot="starter"
+    //testRoot="starter"
+    testRoot="com.jmconsultant.starter"
 }
 
 test.finalizedBy(aggregate)
