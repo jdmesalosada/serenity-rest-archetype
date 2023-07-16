@@ -3,11 +3,9 @@ package com.jmconsultant.starter.facts;
 import com.google.gson.GsonBuilder;
 import com.jmconsultant.starter.models.register.UserRegisterRequest;
 import io.restassured.http.ContentType;
-import io.restassured.specification.RequestSpecification;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.facts.Fact;
 import net.serenitybdd.screenplay.rest.interactions.Post;
-import org.codehaus.groovy.ast.GenericsType;
 
 import static com.jmconsultant.starter.endpoints.EndPoints.REGISTER_USER;
 
@@ -38,6 +36,5 @@ public class AnUserRegistered implements Fact {
     public String toString() {
         String userInfo = new GsonBuilder().setPrettyPrinting().create().toJson(this.userRegisterRequest);
         return "An user register with following info: \n " + userInfo;
-
     }
 }

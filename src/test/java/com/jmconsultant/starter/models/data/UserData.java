@@ -6,26 +6,14 @@ import lombok.ToString;
 @Data
 @ToString
 public class UserData {
-    /*public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }*/
-
-    private String name;
     private Integer id;
+    private String name;
+    private String lastName;
 
-    /*public String toString(){
-        return "id: " + this.id + " name: " + this.name;
-    }*/
+    public UserData(Integer id, String name, String lastName){
+        this.id = id;
+        this.name = name;
+        this.lastName = lastName;
+    }
+
 }
