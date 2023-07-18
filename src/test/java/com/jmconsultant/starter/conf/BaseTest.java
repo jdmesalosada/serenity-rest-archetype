@@ -27,7 +27,8 @@ public abstract class BaseTest {
     @BeforeAll
     public static void setBaseConfiguration() {
         SerenityRest.config().decoderConfig(DecoderConfig.decoderConfig().defaultContentCharset("UTF-8"));
-        OnStage.setTheStage(Cast.whereEveryoneCan(CallAnApi.at("https://reqres.in")));
+        OnStage
+                .setTheStage(Cast.whereEveryoneCan(CallAnApi.at("https://26t6vx3aa4.execute-api.us-east-1.amazonaws.com")));
         SerenityRest.setDefaultRequestSpecification(defaultRequestSpecification());
 
         actor = theActorCalled("Admin");
