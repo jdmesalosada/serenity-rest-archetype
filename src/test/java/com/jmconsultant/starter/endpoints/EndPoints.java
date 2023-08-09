@@ -4,6 +4,7 @@ public enum EndPoints {
     GET_ALL_USERS("/api/users"),
     GET_SINGLE_USER("/api/users/{user_id}"),
 
+    LOGIN("/DEV/v1/login"),
     REGISTER_USER("/api/register")
     ;
 
