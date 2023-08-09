@@ -30,7 +30,7 @@ public abstract class BaseTest {
         OnStage.setTheStage(Cast.whereEveryoneCan(CallAnApi.at("https://reqres.in")));
         SerenityRest.setDefaultRequestSpecification(defaultRequestSpecification());
 
-        actor = theActorCalled("Admin");
+        actor = theActorCalled("Fernanda");
 
     }
     private static RequestSpecification defaultRequestSpecification() {
