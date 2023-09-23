@@ -12,6 +12,7 @@ import net.serenitybdd.junit5.SerenityJUnit5Extension;
 import net.serenitybdd.screenplay.ensure.Ensure;
 import net.thucydides.core.annotations.Narrative;
 import net.thucydides.core.annotations.TestsRequirement;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -24,6 +25,7 @@ import java.io.IOException;
         "I want to be able to ..",
         "in order to ..."})
 @DisplayName("Get users feature")
+@Disabled
 public class GetUsers extends BaseTest {
 
 

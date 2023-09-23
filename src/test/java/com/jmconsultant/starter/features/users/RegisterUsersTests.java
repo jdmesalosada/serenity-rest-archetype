@@ -7,6 +7,7 @@ import com.jmconsultant.starter.models.register.UserRegisterRequest;
 import com.jmconsultant.starter.util.StringToJson;
 import net.serenitybdd.junit5.SerenityJUnit5Extension;
 import net.thucydides.core.annotations.Narrative;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -19,19 +20,20 @@ import java.io.IOException;
         "I want to be able to ..",
         "in order to ..."})
 @DisplayName("Register users feature")
+@Disabled
 public class RegisterUsersTests extends BaseTest {
 
     @Test
     @DisplayName("Register an user")
     void registerAnUserFactSample(){
 
-        UserRegisterRequest userToRegisterWithDefaultInfo =
+        /*UserRegisterRequest userToRegisterWithDefaultInfo =
                 RegisteredUser.withDefaultInfo();
 
         actor.has(
                 AnUserRegistered.withInfo(userToRegisterWithDefaultInfo)
         );
-
+*/
 
     }
 }

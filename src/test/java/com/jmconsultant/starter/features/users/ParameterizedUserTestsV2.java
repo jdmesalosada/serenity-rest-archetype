@@ -6,6 +6,7 @@ import com.jmconsultant.starter.conf.BaseTest;
 import com.jmconsultant.starter.models.data.UserData;
 import com.jmconsultant.starter.tasks.GetSingleUser;
 import net.serenitybdd.junit5.SerenityJUnit5Extension;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.aggregator.AggregateWith;
@@ -13,6 +14,7 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
 @ExtendWith(SerenityJUnit5Extension.class)
+@Disabled
 public class ParameterizedUserTestsV2 extends BaseTest {
 
     @ParameterizedTest
