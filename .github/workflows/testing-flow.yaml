@@ -1,7 +1,10 @@
 name: Gradle Build
 
-on: repository_dispatch
-
+on:
+  push:
+    branches:
+      - main
+  repository_dispatch:
 
 jobs:
         build:
