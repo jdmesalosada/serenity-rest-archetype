@@ -6,6 +6,8 @@ import net.serenitybdd.screenplay.ensure.Ensure;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import static org.hamcrest.Matchers.equalTo;
+
 public class EnumTests extends BaseTest {
 
     @Test
@@ -16,6 +18,17 @@ public class EnumTests extends BaseTest {
 
         actor.attemptsTo(
                 Ensure.that(userStatus).isEqualTo(UserStatus.ACTIVE)
+        );
+
+    }
+
+    @Test
+    @DisplayName("fail on purpose")
+    void failOnPurpose() {
+        UserStatus userStatus = UserStatus.findByDescription("active user");
+
+        actor.attemptsTo(
+                Ensure.that(userStatus).isEqualTo(UserStatus.BLOCKED)
         );
 
     }
