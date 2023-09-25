@@ -21,4 +21,4 @@ jobs:
                                   java-version: '17'
 
                         - name: Build with Gradle
-                          run: gradle clean test ${{ github.event.client_payload.tags }}"
+                          run: gradle clean test ${{ github.event.client_payload.tags }}
