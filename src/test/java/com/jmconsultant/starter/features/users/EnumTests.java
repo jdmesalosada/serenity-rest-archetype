@@ -28,7 +28,7 @@ public class EnumTests extends BaseTest {
         UserStatus userStatus = UserStatus.findByDescription("active user");
 
         actor.attemptsTo(
-                Ensure.that(userStatus).isEqualTo(UserStatus.BLOCKED)
+                Ensure.that(userStatus).isEqualTo(UserStatus.ACTIVE)
         );
 
     }
